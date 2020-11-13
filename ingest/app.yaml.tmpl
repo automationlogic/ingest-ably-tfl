@@ -1,0 +1,9 @@
+runtime: nodejs12
+service: ingest-ably-tfl
+entrypoint: node app.js
+env_variables:
+    PROJECT: $ANALYTICS_PROJECT    # replace in cloud build step
+    TOPIC: ably-tfl-tube
+    SUBSCRIPTION: ably-tfl-tube
+    DATASET: ably_tfl
+    TABLE: tube
