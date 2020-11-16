@@ -1,13 +1,8 @@
 from flask import Flask
 
-import requests as rq
-import logging
 import json
 import os
 import time
-import datetime
-import csv
-from random import randint
 
 from google.cloud import pubsub_v1
 from google.cloud import bigquery
