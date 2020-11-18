@@ -2,6 +2,7 @@
   "dependencies": {
     "@google-cloud/pubsub": "^2.6.0",
     "@google-cloud/secret-manager": "^3.2.2",
-    "ably": "^1.2.4"
+    "ably": "^1.2.4",
+    "express": "^4.17.1"
   }
 }
