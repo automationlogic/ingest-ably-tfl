@@ -3,7 +3,7 @@ instance_class: B1
 manual_scaling:
     instances: 1
 service: process-ably-tfl
-entrypoint: gunicorn -w 1 -t 0 -b :8080 app.main:app
+entrypoint: gunicorn -w 1 -t 0 -b :$PORT app.main:app
 env_variables:
     PROJECT: $ANALYTICS_PROJECT    # replace in cloud build step
     TOPIC: ably-tfl-tube
