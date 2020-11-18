@@ -11,6 +11,20 @@ from google.cloud.exceptions import NotFound, Conflict
 
 app = Flask(__name__)
 
+@app.route('/')
+def ok():
+    return 'ok'
+
+# Dummy handler for App Engine request sent on startup
+@app.route('/_ah/start')
+def start_app():
+    return 'App Starting'
+
+# Dummy handler for App Engine request sent on shutdown
+@app.route('/_ah/stop')
+def stop_app():
+    return 'App Stopping'
+
 def subscribe():
     future = subscriber.subscribe(subscription_path, callback=callback)
 
